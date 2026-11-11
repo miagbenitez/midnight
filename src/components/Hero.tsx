@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { ArrowDown, ArrowUpRight } from 'lucide-react'
 import { siteConfig } from '../data/siteConfig'
+import { publicAsset } from '../data/publicAsset'
 
 function Hero() {
   return (
@@ -28,8 +29,8 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.28 }}
           >
-            Soy desarrollador digital y creo sitios web, aplicaciones y experiencias digitales
-            combinando diseño, tecnología y creatividad.
+            Soy desarrolladora web en formación. Me enfoco en lo visual y en darles vida a las
+            páginas combinando diseño, código y creatividad.
           </motion.p>
           <motion.div
             className="hero-actions"
@@ -58,7 +59,7 @@ function Hero() {
           <div className="orbit orbit-one" />
           <div className="orbit orbit-two" />
           <div className="eclipse">
-            <img src="/favicon.svg" alt="" />
+            <img src={publicAsset('/favicon.svg')} alt="" />
           </div>
           <div className="art-cross cross-one" />
           <div className="art-cross cross-two" />

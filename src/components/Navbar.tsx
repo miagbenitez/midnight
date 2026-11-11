@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { ArrowUpRight, Menu, X } from 'lucide-react'
+import { publicAsset } from '../data/publicAsset'
 
 const links = [
   { label: 'Inicio', href: '#home' },
@@ -17,7 +18,7 @@ function Navbar() {
     <header className="site-header">
       <nav className="nav-shell" aria-label="Navegación principal">
         <a className="brand" href="#home" aria-label="MIDNIGHT, inicio" onClick={closeMenu}>
-          <img src="/logo.svg" alt="MIDNIGHT®" />
+          <img src={publicAsset('/logo.svg')} alt="MIDNIGHT®" />
         </a>
         <button
           className="menu-toggle"

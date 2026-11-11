@@ -3,6 +3,7 @@ import {
   type PortfolioProject,
   type ProjectPresentation,
 } from './projects'
+import { publicAsset } from './publicAsset'
 
 const githubApi = 'https://api.github.com'
 const githubUsername = 'miagbenitez'
@@ -176,7 +177,7 @@ export async function fetchPortfolioProjects(
         image:
           getSafeHttpUrl(configuration.image) ??
           (configuration.image?.startsWith('/') && !configuration.image.startsWith('//')
-            ? configuration.image
+            ? publicAsset(configuration.image)
             : undefined),
         featured: configuration.featured ?? false,
         problem: configuration.problem?.trim() || undefined,

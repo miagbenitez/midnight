@@ -18,6 +18,10 @@ npm run build
 npm run preview
 ```
 
+### Publicar en GitHub Pages
+
+Al subir cambios a `main`, GitHub Actions compila y publica el portfolio automáticamente en `https://miagbenitez.github.io/midnight/`. En el repositorio, selecciona **Settings → Pages → Build and deployment → GitHub Actions** para habilitar el despliegue. El primer despliegue puede tardar unos minutos.
+
 ## Personalización
 
 - `src/data/siteConfig.ts`: email, WhatsApp, redes, foto de perfil, biografía, filosofía, intereses y objetivos. Los enlaces personales vacíos no se muestran.
