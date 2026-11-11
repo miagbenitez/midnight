@@ -1,0 +1,17 @@
+interface SectionHeadingProps {
+  eyebrow: string
+  title: string
+  description?: string
+}
+
+function SectionHeading({ eyebrow, title, description }: SectionHeadingProps) {
+  return (
+    <div className="section-heading">
+      <span className="eyebrow"><span className="eyebrow-dot" />{eyebrow}</span>
+      <h2>{title}</h2>
+      {description && <p>{description}</p>}
+    </div>
+  )
+}
+
+export default SectionHeading

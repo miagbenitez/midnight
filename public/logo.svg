@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 286 56" fill="none">
+  <path d="M4 48V8h7l13 20L37 8h7v40h-8V23L24 40 12 23v25H4Z" fill="#F5F0FF"/>
+  <path d="M39 28a17 17 0 1 0 17-17 13 13 0 1 1-17 17Z" fill="#9B6DFF"/>
+  <text x="72" y="38" fill="#F5F0FF" font-family="Arial,sans-serif" font-size="25" font-weight="600" letter-spacing="2">MIDNIGHT</text>
+  <text x="271" y="17" fill="#9B6DFF" font-family="Arial,sans-serif" font-size="10">®</text>
+</svg>
