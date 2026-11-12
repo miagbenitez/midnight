@@ -22,6 +22,10 @@ npm run preview
 
 Al subir cambios a `main`, GitHub Actions compila y publica el portfolio automáticamente en `https://miagbenitez.github.io/midnight/`. En el repositorio, selecciona **Settings → Pages → Build and deployment → GitHub Actions** para habilitar el despliegue. El primer despliegue puede tardar unos minutos.
 
+### Vista en Campusitec
+
+`index.php` permite que un workspace PHP muestre el portfolio publicado dentro de su vista previa. Si Campusitec no sincroniza automáticamente el repositorio, importa este archivo en la raíz del workspace PHP para que `Visitar sitio` lo cargue.
+
 ## Personalización
 
 - `src/data/siteConfig.ts`: email, WhatsApp, redes, foto de perfil, biografía, filosofía, intereses y objetivos. Los enlaces personales vacíos no se muestran.
