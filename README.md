@@ -24,7 +24,7 @@ Al subir cambios a `main`, GitHub Actions compila y publica el portfolio automá
 
 ### Vista en Campusitec
 
-`index.php` permite que un workspace PHP muestre el portfolio publicado dentro de su vista previa. Si Campusitec no sincroniza automáticamente el repositorio, importa este archivo en la raíz del workspace PHP para que `Visitar sitio` lo cargue.
+`index.html` detecta cuando se abre desde Campusitec y muestra el portfolio publicado dentro de la vista previa; fuera de Campusitec carga la aplicación React normalmente. `index.php` conserva la misma vista como alternativa para workspaces que prioricen PHP. En Campusitec, ejecuta el workspace y pulsa `Visitar sitio`.
 
 ## Personalización
 

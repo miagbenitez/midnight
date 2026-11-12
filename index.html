@@ -21,10 +21,62 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <style>
+      html.campusitec-preview,
+      html.campusitec-preview body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background: #0b0911;
+      }
+
+      #campusite-preview iframe {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        border: 0;
+      }
+
+      #campusite-preview .fallback {
+        position: fixed;
+        right: 12px;
+        bottom: 12px;
+        padding: 10px 14px;
+        border: 1px solid #9b6dff;
+        background: #171222;
+        color: #f5f0ff;
+        font: 14px system-ui, sans-serif;
+        text-decoration: none;
+      }
+
+      #campusite-preview .fallback:focus-visible {
+        outline: 2px solid #d7c4ff;
+        outline-offset: 3px;
+      }
+    </style>
     <title>MIDNIGHT® — Experiencias digitales</title>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div id="campusite-preview" hidden>
+      <iframe
+        title="Portfolio MIDNIGHT de Mia Benítez"
+        src="https://miagbenitez.github.io/midnight/"
+        allow="fullscreen"
+        loading="eager"
+      ></iframe>
+      <a class="fallback" href="https://miagbenitez.github.io/midnight/" target="_blank" rel="noopener noreferrer">
+        Abrir portfolio en otra pestaña
+      </a>
+    </div>
+    <script type="module">
+      if (/(^|\.)campusitec\.com$/i.test(window.location.hostname)) {
+        document.documentElement.classList.add('campusitec-preview')
+        document.getElementById('root')?.setAttribute('hidden', '')
+        document.getElementById('campusite-preview')?.removeAttribute('hidden')
+      } else {
+        import('./src/main.tsx')
+      }
+    </script>
   </body>
 </html>
